@@ -1,0 +1,34 @@
+body,html {
+  background-color: #fff;
+  font-family: Helvetica Neue;
+  color: #383838;
+  width: 100%;
+  height: 100%;
+}
+
+body.light {
+  background-color: #fff;
+}
+
+body.dark {
+  background-color: #282929;
+  color: #eee;
+}
+
+li {
+  list-style-type: none;
+  font-weight: 200;
+}
+
+.page-wrap {
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.home-heading {
+  font-size: 54px;
+  font-weight: 100;
+  text-align: left;
+  padding-bottom: 0px;
+}
