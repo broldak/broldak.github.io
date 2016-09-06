@@ -1,9 +1,13 @@
 body,html {
   background-color: #fff;
   font-family: Helvetica Neue;
-  color: #383838;
+  color: #424242;
   width: 100%;
   height: 100%;
+}
+
+a {
+  color: #dc7878;
 }
 
 body.light {
@@ -21,14 +25,15 @@ li {
 }
 
 .page-wrap {
-  width: 95%;
-  margin: 0 auto;
-  padding-top: 10px;
+  padding: 16px 24px;
 }
 
 .home-heading {
   font-size: 54px;
   font-weight: 100;
   text-align: left;
-  padding-bottom: 0px;
+  padding-bottom: 4px;
+  display: inline-block;
+  border-bottom: 3px solid #dc7878;
+  margin-bottom: 16px;
 }
