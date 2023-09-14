@@ -6,9 +6,15 @@ export default function Home() {
       <div className="flex flex-col flex-1 z-10 min-h-full max-w-5xl w-full items-center justify-center">
         <h1 className="font-bold text-4xl text-center">Hello, I'm Brian</h1>
         <p className="mt-2 text-center">
-          I'm a <a href="https://github.com/broldak">software engineer</a>,{" "}
-          <a href="https://www.strava.com/athletes/11417793">cyclist</a>, and
-          karaoke enthusiast
+          I'm a{" "}
+          <a href="https://github.com/broldak" target="_blank">
+            software engineer
+          </a>
+          ,{" "}
+          <a href="https://www.strava.com/athletes/11417793" target="_blank">
+            cyclist
+          </a>
+          , and karaoke enthusiast
         </p>
 
         <div className="max-sm:min-w-[320px] min-w-[480px] h-[0.01rem] bg-white mt-8 mb-8"></div>
