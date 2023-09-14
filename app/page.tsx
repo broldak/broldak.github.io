@@ -17,7 +17,7 @@ export default function Home() {
           , and karaoke enthusiast
         </p>
 
-        <div className="max-sm:min-w-[320px] min-w-[480px] h-[0.01rem] bg-white mt-8 mb-8"></div>
+        <div className="max-sm:min-w-[320px] min-w-[480px] h-[0.5px] bg-white mt-8 mb-8"></div>
 
         <div className="text-center">
           <h2 className="text-2xl font-semibold mb-4">Experience</h2>
