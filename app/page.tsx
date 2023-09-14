@@ -4,12 +4,12 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-20">
       <div className="flex flex-col flex-1 z-10 min-h-full max-w-5xl w-full items-center justify-center">
-        <h1 className="font-bold text-4xl">Hello, I'm Brian</h1>
+        <h1 className="font-bold text-4xl text-center">Hello, I'm Brian</h1>
         <p className="mt-2 text-center">
           I'm a software engineer, cyclist, and karaoke enthusiast
         </p>
 
-        <div className="min-w-[480px] h-[0.01rem] bg-white mt-8 mb-8"></div>
+        <div className="max-sm:min-w-[320px] min-w-[480px] h-[0.01rem] bg-white mt-8 mb-8"></div>
 
         <div className="text-center">
           <h2 className="text-2xl font-semibold mb-4">Experience</h2>
