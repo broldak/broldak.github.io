@@ -4,7 +4,9 @@ export default function Home() {
   return (
     <main className="flex h-[100dvh] flex-col items-center justify-between p-16">
       <div className="flex flex-col flex-1 z-10 min-h-full max-w-5xl w-full items-center justify-center">
-        <h1 className="font-bold text-4xl text-center">Hello, I'm Brian</h1>
+        <h1 className="font-sans font-bold text-4xl text-center text-slate-900 dark:text-white">
+          Rapidly build modern websites without ever leaving your HTML.
+        </h1>
         <p className="mt-2 text-center">
           I'm a{" "}
           <a href="https://github.com/broldak" target="_blank">
