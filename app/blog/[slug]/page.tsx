@@ -10,6 +10,7 @@ const Post = async (props: { params: { slug: string } }) => {
     const post = getPostBySlug(params.slug);
 
     if (!post) {
+      console.log("Post not found");
       notFound();
     }
 
@@ -27,6 +28,7 @@ const Post = async (props: { params: { slug: string } }) => {
       </div>
     );
   } catch {
+    console.log("Post not found - Error");
     notFound();
   }
 };
