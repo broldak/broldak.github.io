@@ -9,7 +9,7 @@ export default function Blog() {
     <div className="w-full">
       <h1 className="text-4xl font-bold text-center">Blog</h1>
       <ul>
-        {posts.filter(post => post !== null).map((post, idx) => (
+        {posts.map((post, idx) => (
           <li key={post.slug} className={classNames({
             'py-8 flex items-center': true,
             'border-b border-slate-500': idx !== posts.length - 1
