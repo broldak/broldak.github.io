@@ -11,7 +11,7 @@ const Post = async (props: { params: { slug: string } }) => {
 
     if (!post) {
       console.log("Post not found");
-      notFound();
+      return <div>POST NOT FOUND</div>;
     }
 
     const content = await markdownToHtml(post.content || "");
@@ -29,7 +29,7 @@ const Post = async (props: { params: { slug: string } }) => {
     );
   } catch {
     console.log("Post not found - Error");
-    notFound();
+    return <div>POST NOT FOUND - ERROR</div>;
   }
 };
 
