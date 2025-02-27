@@ -5,9 +5,11 @@ import markdownStyles from "@/app/components/markdown-styles.module.css";
 import Link from "next/link";
 
 const Post = async ({ params }: { params: { slug: string } }) => {
-
-  try {
     const post = getPostBySlug(params.slug);
+
+    if (!post) {
+        notFound();
+    }
 
     const content = await markdownToHtml(post.content || "");
 
@@ -24,11 +26,6 @@ const Post = async ({ params }: { params: { slug: string } }) => {
         </article>
       </div>
     );
-
-  } catch {
-    notFound();
-  }
-  
 };
 
 export default Post;
