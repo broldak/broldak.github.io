@@ -29,6 +29,10 @@ export function getAllPosts(): Post[] {
     .map((slug) => getPostBySlug(slug))
     .filter((post) => post !== null)
     // sort posts by date in descending order
-    .sort((post1, post2) => (post1?.date > post2?.date ? -1 : 1));
+    .sort((post1, post2) => {
+      const date1 = post1?.date ?? 0;
+      const date2 = post2?.date ?? 0;
+      return date1 > date2 ? -1 : 1;
+  });
   return posts;
 }
