@@ -1,14 +1,16 @@
+import Link from "next/link";
+
 const Experience = ({ experience }: { experience: { title: string, company: string, url: string } }) => {
   return (
     <div>
       <h3 className="text-lg">
         {experience.title} @{" "}
-        <a
+        <Link
           href={experience.url}
           target="_blank"
         >
           {experience.company}
-        </a>
+          </Link>
       </h3>
     </div>
   )

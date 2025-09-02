@@ -1,4 +1,5 @@
 import Experience from "./components/experience";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,17 +9,17 @@ export default function Home() {
       </h1>
       <p className="mt-2 text-center">
         I'm a{" "}
-        <a href="https://github.com/broldak" target="_blank">
+        <Link href="https://github.com/broldak" target="_blank">
           software engineering manager
-        </a>
+        </Link>
         ,{" "}
-        <a href="https://www.strava.com/athletes/11417793" target="_blank">
+        <Link href="https://www.strava.com/athletes/11417793" target="_blank">
           cyclist
-        </a>
+        </Link>
         , and karaoke enthusiast
       </p>
 
-      <div className="max-sm:min-w-[320px] min-w-[480px] h-[1px] bg-slate-500 mt-8 mb-8"></div>
+      <div className="max-sm:min-w-[320px] min-w-[480px] h-[1px] bg-gray-400 mt-8 mb-8"></div>
 
       <div className="text-center">
         <h2 className="text-2xl font-semibold mb-4">Experience</h2>
