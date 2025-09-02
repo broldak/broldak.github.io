@@ -4,26 +4,18 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 20, 31, 51;
-  --background-end-rgb: 29, 41, 61;
+  --background-start-rgb: 33, 34, 36;
+  --background-end-rgb: 29, 31, 33;
 }
 
 a {
-  color: #50adf0;
+  color: #8BA6CE;
   transition: opacity 0.2s ease-in-out;
 }
 
 a:hover {
   opacity: 0.8;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
 
 body {
   color: rgb(var(--foreground-rgb));

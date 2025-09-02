@@ -11,7 +11,7 @@ const Post = async (props: Params) => {
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <div className="w-[80%]">
+    <div className="w-full">
       <div className="mb-4">
         <Link href="/blog">&lt; Back to Blog</Link>
       </div>

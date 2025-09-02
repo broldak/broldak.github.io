@@ -25,16 +25,15 @@ export default function Home() {
 
         <p className="text-xs">CURRENTLY</p>
         <div className="mt-2">
-          <Experience experience={{ title: "Head of Engineering", company: "Swantide", url: "https://swantide.com" }} />
+          <Experience experience={{ title: "Engineering Manager", company: "Confluent", url: "https://www.confluent.io" }} />
         </div>
 
         <p className="mt-8 text-xs">PREVIOUSLY</p>
         <div className="mt-2">
-          <Experience experience={{ title: "Engineering Manager", company: "LinkedIn", url: "https://www.linkedin.com" }} />
+          <Experience experience={{ title: "Head of Engineering", company: "Swantide", url: "https://swantide.com" }} />
         </div>
-
         <div className="mt-2">
-          <Experience experience={{ title: "Staff Software Engineer", company: "LinkedIn", url: "https://www.linkedin.com" }} />
+          <Experience experience={{ title: "Engineering Manager", company: "LinkedIn", url: "https://www.linkedin.com" }} />
         </div>
       </div>
     </div>
