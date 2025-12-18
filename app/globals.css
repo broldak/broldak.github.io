@@ -4,12 +4,12 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 33, 34, 36;
-  --background-end-rgb: 29, 31, 33;
+  --background-start-rgb: 43, 35, 51;
+  --background-end-rgb: 36, 31, 41;
 }
 
 a {
-  color: #8BA6CE;
+  color: #84b7f4;
   transition: opacity 0.2s ease-in-out;
 }
 

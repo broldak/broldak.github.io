@@ -17,8 +17,6 @@ const NavLink = ({ href, children }: { href: string, children: React.ReactNode }
   const isExact = nPath === nHref;
   const isChild = nHref !== "/" && (nPath === nHref || nPath.startsWith(nHref + "/"));
   const isActive = isExact || isChild;
-
-  debugger;
   
   return (
     <Link href={href} className={isActive ? "pointer-events-none text-white" : "inherit"}>{children}</Link>
@@ -31,6 +29,9 @@ export default function Navbar() {
       <ul className="py-8 h-100% w-full flex justify-center gap-8">
         <li>
           <NavLink href="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink href="/experience">Experience</NavLink>
         </li>
         <li>
           <NavLink href="/blog">Blog</NavLink>
