@@ -5,8 +5,6 @@ import markdownStyles from "@/app/components/markdown-styles.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
 
-export const dynamicParams = false;
-
 const Post = async (props: Params) => {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
@@ -54,8 +52,6 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  return [{slug: "test"}];
-  
   const posts = getAllPosts();
 
   return posts.map((post) => ({
