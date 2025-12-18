@@ -8,10 +8,16 @@ const postsDirectory = join(process.cwd(), "content", "posts");
 const experiencesDirectory = join(process.cwd(), "content", "experiences");
 
 export function getPostSlugs() {
+  if (!fs.existsSync(postsDirectory)) {
+    return [];
+  }
   return fs.readdirSync(postsDirectory).filter((file) => file.endsWith(".md"));
 }
 
 export function getExperienceSlugs() {
+  if (!fs.existsSync(experiencesDirectory)) {
+    return [];
+  }
   return fs.readdirSync(experiencesDirectory).filter((file) => file.endsWith(".md"));
 }
 

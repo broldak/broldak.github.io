@@ -5,6 +5,8 @@ import markdownStyles from "@/app/components/markdown-styles.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
 
+export const dynamicParams = false;
+
 const Post = async (props: Params) => {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
