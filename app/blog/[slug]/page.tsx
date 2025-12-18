@@ -54,7 +54,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  return [];
+  return [{slug: "test"}];
   
   const posts = getAllPosts();
 
