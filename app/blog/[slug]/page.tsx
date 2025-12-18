@@ -54,6 +54,8 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
+  return [];
+  
   const posts = getAllPosts();
 
   return posts.map((post) => ({
