@@ -11,14 +11,23 @@ const Post = async (props: Params) => {
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <div className="w-full">
-      <div className="mb-4">
-        <Link href="/blog">&lt; Back to Blog</Link>
-      </div>
-      <article>
-        <h1 className="text-4xl font-bold">{post.title}</h1>
-        <div className={markdownStyles["markdown"]} dangerouslySetInnerHTML={{ __html: content }} />
-      </article>
+    <div className="flex flex-col flex-1">
+      <section className="w-full px-8 lg:px-16 py-24">
+        <div className="max-w-2xl mx-auto">
+          <div className="mb-8">
+            <Link href="/blog">&larr; Back to Blog</Link>
+          </div>
+          <article>
+            <h1 className="font-heading font-extrabold text-5xl tracking-tight-heading text-white">
+              {post.title}
+            </h1>
+            <div
+              className={markdownStyles["markdown"]}
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          </article>
+        </div>
+      </section>
     </div>
   );
 };
@@ -30,8 +39,6 @@ type Params = {
     slug: string;
   }>;
 };
-
-
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
@@ -46,7 +53,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   return {
     title,
     openGraph: {
-      title
+      title,
     },
   };
 }

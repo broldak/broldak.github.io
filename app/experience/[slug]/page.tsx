@@ -1,37 +1,44 @@
-import { getAllExperience, getAllPosts, getExperienceBySlug, getPostBySlug } from "@/lib/api";
+import { getAllExperience, getExperienceBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { notFound } from "next/navigation";
 import markdownStyles from "@/app/components/markdown-styles.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
 
-const Post = async (props: Params) => {
+const ExperiencePost = async (props: Params) => {
   const params = await props.params;
   const post = getExperienceBySlug(params.slug);
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <div className="w-full">
-      <div className="mb-4">
-        <Link href="/experience">&lt; Back to Experience</Link>
-      </div>
-      <article className="mt-8">
-        <h1 className="text-4xl font-bold">{post.title}</h1>
-        <div className={markdownStyles["markdown"]} dangerouslySetInnerHTML={{ __html: content }} />
-      </article>
+    <div className="flex flex-col flex-1">
+      <section className="w-full px-8 lg:px-16 py-24">
+        <div className="max-w-2xl mx-auto">
+          <div className="mb-8">
+            <Link href="/experience">&larr; Back to Experience</Link>
+          </div>
+          <article>
+            <h1 className="font-heading font-extrabold text-5xl tracking-tight-heading text-white">
+              {post.title}
+            </h1>
+            <div
+              className={markdownStyles["markdown"]}
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          </article>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default Post;
+export default ExperiencePost;
 
 type Params = {
   params: Promise<{
     slug: string;
   }>;
 };
-
-
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
@@ -46,7 +53,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   return {
     title,
     openGraph: {
-      title
+      title,
     },
   };
 }
