@@ -1,26 +1,41 @@
 import Image from "next/image";
 
-export default function Navbar() {
+export default function Footer() {
   return (
-    <nav className="px-8 flex justify-center items-center">
-      <ul className="py-8 h-100% w-full flex justify-center gap-8">
-        <li>
-          <div className="relative w-10 h-10">
-            <a className="w-full h-full block" href="https://github.com/broldak" target="_blank">
-              <Image src="/github-mark-white.png" alt="LinkedIn" layout='fill'
-      objectFit='contain' />
+    <footer className="w-full bg-band-slate">
+      <div className="max-w-5xl mx-auto px-8 lg:px-16 py-12 flex items-center justify-between">
+        <ul className="flex gap-6">
+          <li>
+            <a
+              className="block"
+              href="https://github.com/broldak"
+              target="_blank"
+            >
+              <Image
+                src="/github-mark-white.png"
+                alt="GitHub"
+                width={32}
+                height={32}
+              />
             </a>
-          </div>
-        </li>
-        <li>
-          <div className="relative w-10 h-10">
-            <a className="w-full h-full block" href="https://www.linkedin.com/in/brianoldak" target="_blank">
-              <Image src="/InBug-White.png" alt="LinkedIn" layout='fill'
-      objectFit='contain' />
+          </li>
+          <li>
+            <a
+              className="block"
+              href="https://www.linkedin.com/in/brianoldak"
+              target="_blank"
+            >
+              <Image
+                src="/InBug-White.png"
+                alt="LinkedIn"
+                width={32}
+                height={32}
+              />
             </a>
-          </div>
-        </li>
-      </ul>
-    </nav>
+          </li>
+        </ul>
+        <p className="text-sm text-muted">Brian Oldak</p>
+      </div>
+    </footer>
   );
 }
