@@ -1,31 +1,48 @@
 import { getAllExperience } from "@/lib/api";
 import Link from "next/link";
-import classNames from "classnames";
 import dayjs from "dayjs";
 
 export default function Experience() {
   const experiences = getAllExperience();
 
   return (
-    <div className="w-full">
-      <h1 className="text-4xl font-bold text-center">Experience</h1>
+    <div className="flex flex-col flex-1">
+      <section className="w-full px-8 lg:px-16 py-24">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="font-heading font-extrabold text-5xl tracking-tight-heading text-white">
+            Experience
+          </h1>
+        </div>
+      </section>
 
-      <ul>
-        {experiences.map((experience, idx) => (
-          <li key={experience.slug} className={classNames({
-            'py-8 flex items-center': true,
-            'border-b border-gray-400': idx !== experiences.length - 1
-          })}>
-            <div className="flex-1">
-              <h2 className="text-2xl font-semibold">
-                <Link href={`/experience/${experience.slug}`}>{experience.title}</Link>
-              </h2>
-              <p className="text-md text-gray-300 mt-2">{dayjs(experience.start_date).format('MMM YYYY')} - {experience.end_date ? dayjs(experience.end_date).format('MMM YYYY') : 'Present'}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
-      
+      <section className="w-full px-8 lg:px-16 pb-16">
+        <div className="max-w-5xl mx-auto">
+          <ul>
+            {experiences.map((experience, idx) => (
+              <li
+                key={experience.slug}
+                className={`py-8 flex items-center justify-between ${
+                  idx !== experiences.length - 1
+                    ? "border-b border-white/10"
+                    : ""
+                }`}
+              >
+                <h2 className="font-heading text-2xl font-bold text-white">
+                  <Link href={`/experience/${experience.slug}`}>
+                    {experience.title}
+                  </Link>
+                </h2>
+                <p className="text-sm text-muted shrink-0">
+                  {dayjs(experience.start_date).format("MMM YYYY")} -{" "}
+                  {experience.end_date
+                    ? dayjs(experience.end_date).format("MMM YYYY")
+                    : "Present"}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </div>
   );
 }
