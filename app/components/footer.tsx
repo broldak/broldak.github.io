@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="w-full border-t border-white/10 relative z-10">
-      <div className="max-w-5xl mx-auto px-8 lg:px-16 py-12 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-8 lg:px-16 py-12">
         <ul className="flex gap-6">
           <li>
             <a
@@ -34,7 +34,6 @@ export default function Footer() {
             </a>
           </li>
         </ul>
-        <p className="text-sm text-muted">Brian Oldak</p>
       </div>
     </footer>
   );

@@ -1,8 +1,8 @@
 export default function WireframeBg() {
   return (
-    <div className="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0" aria-hidden="true">
       <svg
-        className="w-full h-full"
+        className="w-full min-h-full"
         viewBox="0 0 1440 900"
         preserveAspectRatio="xMidYMid slice"
         xmlns="http://www.w3.org/2000/svg"
@@ -14,8 +14,8 @@ export default function WireframeBg() {
           x2="600"
           y2="900"
           stroke="white"
-          strokeWidth="0.5"
-          opacity="0.06"
+          strokeWidth="1"
+          opacity="0.12"
         />
         <line
           x1="900"
@@ -23,8 +23,8 @@ export default function WireframeBg() {
           x2="1500"
           y2="700"
           stroke="white"
-          strokeWidth="0.5"
-          opacity="0.05"
+          strokeWidth="1"
+          opacity="0.1"
         />
         <line
           x1="300"
@@ -32,8 +32,8 @@ export default function WireframeBg() {
           x2="1100"
           y2="500"
           stroke="white"
-          strokeWidth="0.5"
-          opacity="0.04"
+          strokeWidth="1"
+          opacity="0.08"
         />
         <line
           x1="1200"
@@ -41,8 +41,8 @@ export default function WireframeBg() {
           x2="400"
           y2="850"
           stroke="white"
-          strokeWidth="0.5"
-          opacity="0.05"
+          strokeWidth="1"
+          opacity="0.1"
         />
 
         {/* Angular polygon */}
@@ -50,8 +50,8 @@ export default function WireframeBg() {
           points="1050,50 1350,200 1250,450 950,350"
           fill="none"
           stroke="white"
-          strokeWidth="0.5"
-          opacity="0.05"
+          strokeWidth="1"
+          opacity="0.1"
         />
 
         {/* Partial triangle */}
@@ -59,8 +59,8 @@ export default function WireframeBg() {
           points="100,600 350,400 500,700"
           fill="none"
           stroke="white"
-          strokeWidth="0.5"
-          opacity="0.04"
+          strokeWidth="1"
+          opacity="0.08"
         />
 
         {/* Arc / partial circle */}
@@ -70,8 +70,8 @@ export default function WireframeBg() {
           r="280"
           fill="none"
           stroke="white"
-          strokeWidth="0.5"
-          opacity="0.04"
+          strokeWidth="1"
+          opacity="0.08"
           strokeDasharray="40 60"
         />
 
@@ -82,8 +82,8 @@ export default function WireframeBg() {
           r="80"
           fill="none"
           stroke="white"
-          strokeWidth="0.5"
-          opacity="0.05"
+          strokeWidth="1"
+          opacity="0.1"
         />
 
         {/* Intersecting lines cluster */}
@@ -93,8 +93,8 @@ export default function WireframeBg() {
           x2="850"
           y2="350"
           stroke="white"
-          strokeWidth="0.5"
-          opacity="0.04"
+          strokeWidth="1"
+          opacity="0.08"
         />
         <line
           x1="700"
@@ -102,8 +102,8 @@ export default function WireframeBg() {
           x2="900"
           y2="100"
           stroke="white"
-          strokeWidth="0.5"
-          opacity="0.04"
+          strokeWidth="1"
+          opacity="0.08"
         />
 
         {/* Long horizontal construction line */}
@@ -113,8 +113,8 @@ export default function WireframeBg() {
           x2="1440"
           y2="680"
           stroke="white"
-          strokeWidth="0.3"
-          opacity="0.03"
+          strokeWidth="0.5"
+          opacity="0.06"
         />
       </svg>
     </div>

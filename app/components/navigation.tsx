@@ -29,7 +29,7 @@ const NavLink = ({
       className={
         isActive
           ? "pointer-events-none text-white font-bold"
-          : "text-muted hover:text-accent font-bold no-underline"
+          : "text-muted hover:text-accent font-bold"
       }
     >
       {children}

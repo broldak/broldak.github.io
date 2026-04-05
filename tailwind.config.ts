@@ -22,8 +22,8 @@ const config: Config = {
         muted: "#d4d4d8",
       },
       fontFamily: {
-        heading: ['"Anybody"', "sans-serif"],
-        body: ['"Instrument Sans"', "sans-serif"],
+        heading: ['"Geist Sans"', "system-ui", "sans-serif"],
+        body: ['"Geist Sans"', "system-ui", "sans-serif"],
       },
       letterSpacing: {
         "tight-heading": "-0.02em",
