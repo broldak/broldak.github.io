@@ -28,7 +28,7 @@ export default function Home() {
       </section>
 
       {/* Currently */}
-      <section className="w-full bg-band-teal px-8 lg:px-16 py-16">
+      <section className="w-full px-8 lg:px-16 py-16">
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-body tracking-wide-label uppercase text-muted">
             Currently
@@ -46,7 +46,7 @@ export default function Home() {
       </section>
 
       {/* Previously */}
-      <section className="w-full bg-band-burgundy px-8 lg:px-16 py-16">
+      <section className="w-full px-8 lg:px-16 py-16">
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-body tracking-wide-label uppercase text-muted">
             Previously

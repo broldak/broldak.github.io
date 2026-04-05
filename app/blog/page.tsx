@@ -26,9 +26,7 @@ export default function Blog() {
         posts.map((post, idx) => (
           <section
             key={post.slug}
-            className={`w-full px-8 lg:px-16 py-12 ${
-              idx % 2 === 1 ? "bg-band-slate" : ""
-            }`}
+            className="w-full px-8 lg:px-16 py-12"
           >
             <div className="max-w-5xl mx-auto flex items-baseline justify-between gap-8">
               <div className="flex-1">

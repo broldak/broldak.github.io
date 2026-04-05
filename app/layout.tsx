@@ -1,5 +1,6 @@
 import Footer from "./components/footer";
 import Navbar from "./components/navigation";
+import WireframeBg from "./components/wireframe-bg";
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -27,9 +28,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="flex flex-col min-h-screen font-body">
+      <body className="flex flex-col min-h-screen font-body relative">
+        <WireframeBg />
         <Navbar />
-        <main className="flex flex-1 flex-col">{children}</main>
+        <main className="flex flex-1 flex-col relative z-10">{children}</main>
         <Footer />
       </body>
     </html>

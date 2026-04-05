@@ -39,7 +39,7 @@ const NavLink = ({
 
 export default function Navbar() {
   return (
-    <nav className="w-full px-8 lg:px-16 py-6">
+    <nav className="w-full px-8 lg:px-16 py-6 relative z-10">
       <div className="max-w-5xl mx-auto flex items-center justify-between">
         <Link
           href="/"
