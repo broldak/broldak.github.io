@@ -1,7 +1,5 @@
 import type { Config } from "tailwindcss";
 
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,20 +8,26 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: [
-          "Inter var",
-          {
-            fontFeatureSettings: '"cv11"',
-            fontVariationSettings: "normal",
-          },
-          ...defaultTheme.fontFamily.sans,
-        ],
+      colors: {
+        base: {
+          start: "#1a1033",
+          end: "#0d0d0d",
+        },
+        band: {
+          teal: "#0f2b2b",
+          burgundy: "#2b0f1a",
+          slate: "#1a1a2e",
+        },
+        accent: "#e87040",
+        muted: "#d4d4d8",
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        heading: ['"Anybody"', "sans-serif"],
+        body: ['"Instrument Sans"', "sans-serif"],
+      },
+      letterSpacing: {
+        "tight-heading": "-0.02em",
+        "wide-label": "0.15em",
       },
     },
   },
